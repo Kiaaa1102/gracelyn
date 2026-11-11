@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100911" />
+    <meta
+      name="description"
+      content="A little love letter, made especially for Gracelyn."
+    />
+    <title>For Gracelyn — A little love, in motion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="night-sky" aria-hidden="true">
+      <span class="star star-one"></span>
+      <span class="star star-two"></span>
+      <span class="star star-three"></span>
+      <span class="star star-four"></span>
+      <span class="star star-five"></span>
+      <span class="star star-six"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="For Gracelyn, home">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span>FOR GRACELYN</span>
+      </a>
+      <p class="header-note"><span class="status-dot"></span> made with all my heart</p>
+      <a class="header-link" href="#love-note">a note for you <span>↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">01 <span>/</span> A LITTLE LOVE LETTER</p>
+          <h1 class="hero-title" id="hero-title">
+            <span>For</span>
+            <span class="title-script">Gracelyn,</span>
+            <span>my favorite</span>
+            <span>kind of magic.</span>
+          </h1>
+          <p class="hero-intro">
+            A small universe of words,<br />
+            gathered just to say one big thing.
+          </p>
+          <a class="discover-link" href="#love-note">
+            <span class="discover-line"></span>
+            <span>there's a little more</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="heart-stage" id="heart-stage">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <p class="orbital-label label-top" aria-hidden="true">a thousand little ways <span>✦</span></p>
+          <canvas
+            id="heartCanvas"
+            aria-label="A heart formed from I love you text particles"
+            role="img"
+          ></canvas>
+          <div class="heart-name" aria-hidden="true">GRACELYN</div>
+          <button
+            class="heart-hitarea"
+            id="heartButton"
+            type="button"
+            aria-label="Scatter the heart"
+            aria-pressed="false"
+          >
+            <span class="sr-only">Scatter the heart, then tap again to bring it back</span>
+          </button>
+          <p class="orbital-label label-bottom" aria-hidden="true">tap the heart to make a wish <span>♡</span></p>
+        </div>
+        <div class="hero-index" aria-hidden="true">A NOTE IN MOTION <span>♡</span></div>
+      </section>
+
+      <div class="marquee" aria-label="I love you in every universe">
+        <div class="marquee-track" aria-hidden="true">
+          <span>I LOVE YOU</span><i>✦</i><span>IN EVERY UNIVERSE</span><i>♡</i>
+          <span>I LOVE YOU</span><i>✦</i><span>IN EVERY UNIVERSE</span><i>♡</i>
+        </div>
+      </div>
+
+      <section class="note-section" id="love-note">
+        <div class="section-kicker">
+          <span>02 <i>/</i> THE IMPORTANT PART</span>
+          <span>just between us</span>
+        </div>
+        <div class="note-grid">
+          <h2 class="note-lead">Some people make the whole world feel softer.</h2>
+          <div class="note-body">
+            <p>
+              You're one of those people, Gracelyn. The kind who turns little
+              moments into the ones I keep, and ordinary days into something
+              lovely.
+            </p>
+            <p class="signature">with all my heart,<br /><span>♡</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="little-things" aria-labelledby="little-things-title">
+        <div class="section-kicker">
+          <span>03 <i>/</i> A FEW LITTLE TRUTHS</span>
+          <span>for your pocket</span>
+        </div>
+        <h2 class="sr-only" id="little-things-title">A few little truths</h2>
+        <div class="truth-grid">
+          <article class="truth-card card-large">
+            <span class="card-index">01</span>
+            <p>you make<br /><em>everything</em><br />softer.</p>
+            <span class="card-star" aria-hidden="true">✦</span>
+          </article>
+          <article class="truth-card card-mid">
+            <span class="card-index">02</span>
+            <p>my favorite<br />little thought<br />is <em>you.</em></p>
+            <span class="card-star" aria-hidden="true">✺</span>
+          </article>
+          <article class="truth-card card-small">
+            <span class="card-index">03</span>
+            <p>still choosing<br /><em>you.</em></p>
+            <span class="card-star" aria-hidden="true">♡</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>made slowly, with love</span>
+      <span>for GRACELYN <i>♥</i></span>
+      <span>always <b>∞</b></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

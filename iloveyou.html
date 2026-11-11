@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Gracelyn❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: white;
+        }
+    .container {
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+    }
+    .heart {
+        position: relative;
+        width: 200px;
+        height: 180px;
+        animation: heartBeat 1.2s infinite;
+        margin: 0 auto;
+        transition: transform 0.3s;
+    }
+    .heart:hover {
+        transform: scale(1.05);
+    }
+    .heart:before,
+    .heart:after {
+        position: absolute;
+        content: "";
+        left: 100px;
+        top: 0;
+        width: 100px;
+        height: 160px;
+        background-color: #ff3366;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        box-shadow: 0 0 25px rgba(255, 51, 102, 0.6);
+    }
+    .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+    .text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        width: 140px;
+        line-height: 1.4;
+        pointer-events: none;
+    }
+    @keyframes heartBeat {
+        0% { transform: scale(1); }
+        15% { transform: scale(1.15); }
+        30% { transform: scale(1); }
+        45% { transform: scale(1.1); }
+        60% { transform: scale(1); }
+    }
+    .instruction {
+        margin-top: 40px;
+        font-size: 16px;
+        color: #888;
+        letter-spacing: 1px;
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        left: -300px;
+        transform: translateY(-50%) rotate(-15deg);
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        z-index: 20;
+        pointer-events: none;
+    }
+    .arrow-tip {
+        width: 0;
+        height: 0;
+        border-left: 20px solid #00ffff;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        filter: drop-shadow(0 0 5px #00ffff);
+    }
+    .arrow-shaft {
+        height: 4px;
+        background: linear-gradient(90deg, #ff007f, #00ffff);
+        width: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 0 8px #00ffff;
+        transition: width 0.8s ease-in-out;
+    }
+    .arrow-words {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 0 0 5px #ff007f;
+        bottom: 8px;
+    }
+    .shoot {
+        animation: flyAndPierce 1s forwards;
+    }
+    @keyframes flyAndPierce {
+        0% {
+            left: -350px;
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        100% {
+            left: 35px;
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="shootArrow()">
+        <div class="heart" id="mainHeart">
+            <div class="text-center">I LOVE YOU<br>GRACELYN
+            </div>
+        </div>
+    </div>
+    <div class="arrow" id="loveArrow">
+        <div class="arrow-shaft" id="shaft">
+            <span class="arrow-words">You're My Favorite Person</span>
+        </div>
+        <div class="arrow-tip"></div>
+    </div>
+    <div class="instruction">Click the heart to shoot the arrow!</div>
+    <script>
+        function shootArrow() {
+            const arrow = document.getElementById('loveArrow');
+            const shaft = document.getElementById('shaft');
+            const infotext = document.getElementById('infotext');
+            arrow.classList.remove('shoot');
+            shaft.style.width = '0px';
+            void arrow.offsetWidth; // Trigger reflow
+            arrow.classList.add('shoot');
+            shaft.style.width = '280px';
+            infotext.innerText = "You're My Favorite Person";
+        }
+    </script>
+</body>
+</html>
